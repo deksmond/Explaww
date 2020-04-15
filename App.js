@@ -1,5 +1,6 @@
 import React, { Container } from 'react';
-import { View, Text, ScrollView, Image, ImageBackground, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, Image, ImageBackground, StyleSheet, TextInput, SafeAreaView } from 'react-native';
+
 /*import NavigationNavigateContainer, { NavigationNativeContainer } from '@react-navigation/native';*/
 
 export default class App extends React.Component{
@@ -51,6 +52,7 @@ export default class App extends React.Component{
             </View>
           </View>
         </ScrollView>
+      
 
       </ScrollView>
     );
