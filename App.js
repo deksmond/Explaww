@@ -1,5 +1,5 @@
 import React, { Container } from 'react';
-import { View, Text, ScrollView, Image, ImageBackground, StyleSheet, TextInput, SafeAreaView, TouchableOpacity, navigate } from 'react-native';
+import { View, Text, ScrollView, ImageBackground, StyleSheet, SafeAreaView } from 'react-native';
 
 import page from './ios/page';
 
@@ -27,7 +27,6 @@ export default class App extends React.Component{
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingTop: 80, paddingHorizontal: 15 }}>
 
-            <TouchableOpacity onPress={() =>  navigate('page')}>
             <View style={{height: 260, width: 190, paddingRight:15}}>
                 <ImageBackground source={require('./imgs/8.jpg')} imageStyle={{borderRadius:30}} style={styles.imgContainer}>
                   <View style={styles.layout}>
@@ -37,7 +36,6 @@ export default class App extends React.Component{
                   </View>
                 </ImageBackground>
               </View>
-              </TouchableOpacity>
 
               <View style={{height: 260, width: 190, paddingRight:15}}>
                 <ImageBackground source={require('./imgs/7.jpg')} imageStyle={{borderRadius: 30}} style={styles.imgContainer}>
