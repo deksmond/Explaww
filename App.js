@@ -10,7 +10,7 @@ export default class App extends React.Component{
     return(
       <SafeAreaView>
         <ScrollView>
-          <View style={{flex: 1, paddingHorizontal: 30, paddingTop: 135}}>
+          <View style={{flex: 1, paddingHorizontal: 30, paddingTop: 50}}>
             <View style={{height: 65, width: 350, backgroundColor: '#F8F8FF'}}>
               <Text style={{fontWeight:'bold', fontSize:25, paddingTop: 7 }}>  Lagos</Text>
               <Text style={{ fontSize:13, paddingTop: 4 }}>  Centre of Excellence</Text>
@@ -22,47 +22,46 @@ export default class App extends React.Component{
                 <Text style={{fontWeight:'bold', paddingBottom: 10 }}>   Deputy Governor: Femi Hamzat</Text>
                 <Text style={{fontWeight:'bold'}}>    Local Government Area: 37</Text>
               </View>
-              </View>
-          
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingTop: 80, paddingHorizontal: 15 }}>
-
-            <View style={{height: 260, width: 190, paddingRight:15}}>
-                <ImageBackground source={require('./imgs/8.jpg')} imageStyle={{borderRadius:30}} style={styles.imgContainer}>
-                  <View style={styles.layout}>
-                    <Text style={styles.imgTxt}>
-                      Places
-                    </Text>
-                  </View>
-                </ImageBackground>
-              </View>
-
-              <View style={{height: 260, width: 190, paddingRight:15}}>
-                <ImageBackground source={require('./imgs/7.jpg')} imageStyle={{borderRadius: 30}} style={styles.imgContainer}>
-                  <View style={styles.layout}>
-                    <Text style={styles.imgTxt}>
-                      Foods
-                    </Text>
-                  </View>
-                </ImageBackground>
-              </View>
-
-              <View style={{height: 260, width: 190, paddingRight:15}}>
-                <ImageBackground source={require('./imgs/6.jpg')} imageStyle={{borderRadius: 30}} style={styles.imgContainer}>
-                  <View style={styles.layout}>
-                    <Text style={styles.imgTxt}>
-                      Culture
-                    </Text>
-                    </View>
-                </ImageBackground>
-              </View>
-
             </View>
-          </ScrollView>
-        
+          
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+              <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingTop: 80, paddingHorizontal: 15 }}>
 
+              <View style={{height: 260, width: 190, paddingRight:15}}>
+                  <ImageBackground source={require('./imgs/8.jpg')} imageStyle={{borderRadius:30}} style={styles.imgContainer}>
+                    <View style={styles.layout}>
+                      <Text style={styles.imgTxt}>
+                        Places
+                      </Text>
+                    </View>
+                  </ImageBackground>
+                </View>
+
+                <View style={{height: 260, width: 190, paddingRight:15}}>
+                  <ImageBackground source={require('./imgs/7.jpg')} imageStyle={{borderRadius: 30}} style={styles.imgContainer}>
+                    <View style={styles.layout}>
+                      <Text style={styles.imgTxt}>
+                        Foods
+                      </Text>
+                    </View>
+                  </ImageBackground>
+                </View>
+
+                <View style={{height: 260, width: 190, paddingRight:15}}>
+                  <ImageBackground source={require('./imgs/6.jpg')} imageStyle={{borderRadius: 30}} style={styles.imgContainer}>
+                    <View style={styles.layout}>
+                      <Text style={styles.imgTxt}>
+                        Culture
+                      </Text>
+                      </View>
+                  </ImageBackground>
+                </View>
+
+              </View>
+            </ScrollView>
+          
         </ScrollView>
-        </SafeAreaView>
+      </SafeAreaView>
     );
   }
 }
