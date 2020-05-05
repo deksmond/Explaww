@@ -1,7 +1,7 @@
 import React, { Container } from 'react';
 import { View, Text, ScrollView, ImageBackground, StyleSheet, SafeAreaView } from 'react-native';
 
-import page from './ios/page';
+import page from './ios/page'
 
 /*import NavigationNavigateContainer, { NavigationNativeContainer } from '@react-navigation/native';*/
 
