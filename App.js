@@ -1,90 +1,125 @@
-import React, { Container } from 'react';
-import { View, Text, ScrollView, ImageBackground, StyleSheet, SafeAreaView } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
 
-import page from './ios/page'
+import Icon from 'react-native-vector-icons/Ionicons';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
-/*import NavigationNavigateContainer, { NavigationNativeContainer } from '@react-navigation/native';*/
+import LoadingScreen from './ios/screens/LoadingScreen'
+import RegisterScreen from './ios/screens/RegisterScreen'
+import LoginScreen from './ios/screens/LoginScreen'
 
-export default class App extends React.Component{
-  render(){
-    return(
-      <SafeAreaView>
-        <ScrollView>
-          <View style={{flex: 1, paddingHorizontal: 30, paddingTop: 50}}>
-            <View style={{height: 65, width: 350, backgroundColor: '#F8F8FF'}}>
-              <Text style={{fontWeight:'bold', fontSize:25, paddingTop: 7 }}>  Lagos</Text>
-              <Text style={{ fontSize:13, paddingTop: 4 }}>  Centre of Excellence</Text>
-              </View>
-            </View>
-            <View style={{flex:1, paddingHorizontal: 30, paddingTop: 5}}>
-              <View style={{paddingTop: 10, height: 100, width: 350, backgroundColor: '#F8F8FF'}}>
-                <Text style={{fontWeight:'bold', paddingBottom: 10 }}>   Governor: Babajide Sanwo-Olu</Text>
-                <Text style={{fontWeight:'bold', paddingBottom: 10 }}>   Deputy Governor: Femi Hamzat</Text>
-                <Text style={{fontWeight:'bold'}}>    Local Government Area: 37</Text>
-              </View>
-            </View>
-          
-            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-              <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingTop: 80, paddingHorizontal: 15 }}>
+import Home from './ios/screens/Home'
+import Location from './ios/screens/Location'
+import Events from './ios/screens/Events'
+import Cart from './ios/screens/Cart'
+import Profile from './ios/screens/Profile'
 
-              <View style={{height: 260, width: 190, paddingRight:15}}>
-                  <ImageBackground source={require('./imgs/8.jpg')} imageStyle={{borderRadius:30}} style={styles.imgContainer}>
-                    <View style={styles.layout}>
-                      <Text style={styles.imgTxt}>
-                        Places
-                      </Text>
-                    </View>
-                  </ImageBackground>
-                </View>
+import ItemScreen from './ios/screens/ItemScreen'
 
-                <View style={{height: 260, width: 190, paddingRight:15}}>
-                  <ImageBackground source={require('./imgs/7.jpg')} imageStyle={{borderRadius: 30}} style={styles.imgContainer}>
-                    <View style={styles.layout}>
-                      <Text style={styles.imgTxt}>
-                        Foods
-                      </Text>
-                    </View>
-                  </ImageBackground>
-                </View>
+import * as firebase from 'firebase'
 
-                <View style={{height: 260, width: 190, paddingRight:15}}>
-                  <ImageBackground source={require('./imgs/6.jpg')} imageStyle={{borderRadius: 30}} style={styles.imgContainer}>
-                    <View style={styles.layout}>
-                      <Text style={styles.imgTxt}>
-                        Culture
-                      </Text>
-                      </View>
-                  </ImageBackground>
-                </View>
+var firebaseConfig = {
+  apiKey: "AIzaSyCdrgM7m4hQ_raHW6rq0RJuebRJAeqQ8ms",
+  authDomain: "eureka-30c21.firebaseapp.com",
+  databaseURL: "https://eureka-30c21.firebaseio.com",
+  projectId: "eureka-30c21",
+  storageBucket: "eureka-30c21.appspot.com",
+  messagingSenderId: "695278736150",
+  appId: "1:695278736150:web:a666634242c3a398bb3637"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-              </View>
-            </ScrollView>
-          
-        </ScrollView>
-      </SafeAreaView>
-    );
+const AppTabNavigator = createMaterialBottomTabNavigator(
+  {
+    Home:{
+      screen: Home,
+      navigationOptions: {
+        tabBarLabel: ' ',
+        tabBarIcon: ({ tintColor }) => (
+          <View>
+            <Icon name={'ios-home'} size={27} style={[{ color: tintColor }]}/>
+          </View>
+        ),
+      }
+    },
+    Location:{
+      screen: Location,
+      navigationOptions: {
+        tabBarLabel: ' ',
+        tabBarIcon: ({ tintColor }) => (
+          <View>
+            <Icon name={'ios-compass'} size={27} style={[{ color: tintColor }]}/>
+          </View>
+        ),
+      }
+    },
+    Events:{
+      screen: Events,
+      navigationOptions: {
+        tabBarLabel: ' ',
+        tabBarIcon: ({ tintColor }) => (
+          <View>
+            <Icon name={'ios-calendar'} size={27} style={[{ color: tintColor }]}/>
+          </View>
+        ),
+      }
+    },
+    Cart:{
+      screen: Cart,
+      navigationOptions: {
+        tabBarLabel: ' ',
+        tabBarIcon: ({ tintColor }) => (
+          <View>
+            <Icon name={'ios-cart'} size={27} style={[{ color: tintColor }]}/>
+          </View>
+        ),
+      }
+    },
+    Profile:{
+      screen: Profile,
+      navigationOptions: {
+        tabBarLabel: ' ',
+        tabBarIcon: ({ tintColor }) => (
+          <View>
+            <Icon name={'ios-person'} size={27} style={[{ color: tintColor }]}/>
+          </View>
+        ),
+      }
+    },
+  },
+  {
+    activeColor: 'red',
+    inactiveColor: 'grey',
+    barStyle: { backgroundColor: '#fff'},
+  },
+  {
+    Item: ItemScreen
   }
-}
+  
+);
 
-const styles = StyleSheet.create({
-imgContainer: {
-  flex: 1, 
-  height:null, 
-  width: null, 
-  resizeMode: 'cover'
-},
-layout: {
-  width: '100%',
-  height: '100%',
-  backgroundColor: 'rgba(0, 0, 0, .2)',
-  borderRadius: 30
-},
-imgTxt: {
-  color: 'white',
-  textAlign: 'center',
-  fontSize: 30,
-  fontWeight:"500",
-  paddingTop: 120,
-},
+const AuthStack = createStackNavigator({
+  Register: RegisterScreen,
+  Login: LoginScreen
 });
 
+const TabStack = createStackNavigator({
+    Item: ItemScreen
+});
+
+export default createAppContainer(
+  createSwitchNavigator(
+    {
+      Loading: LoadingScreen,
+      App: AppTabNavigator,
+      Tab: TabStack,
+      Auth: AuthStack
+    }, 
+    {
+      initialRouteName: "Loading"
+    }
+  )
+);
