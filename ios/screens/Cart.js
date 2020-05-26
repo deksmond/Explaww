@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ScrollView, SafeAreaView, Platform, StatusBar } from 'react-native';
-import { Card, CardItem, Body, Left, Right } from 'native-base';
+import { View, Text, Image, ScrollView, SafeAreaView, Platform, StatusBar, TouchableOpacity, StyleSheet } from 'react-native';
+import { Card, CardItem, Body, Left } from 'native-base';
 
 
 class Cart extends Component{
@@ -19,9 +19,10 @@ class Cart extends Component{
                             "Cart"
                         </Text>
                     </View>
+                    
                     <View style={{height:this.starterHeaderHeight, backgroundColor:'white', borderBottomColor:'#dddddd', borderBottomWidth: 1}}>
                     </View>
-                    
+
                     <ScrollView>
                         <Card style={{ height: 130, paddingTop: 5 }}>
                             <CardItem>

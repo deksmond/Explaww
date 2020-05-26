@@ -57,26 +57,20 @@ class Profile extends Component{
                         </View>
 
                         <View style={{ flex: 1, flexDirection: 'row', marginTop: 50, paddingHorizontal: 30, justifyContent: 'space-around' }}>
-                            <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
-                                <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
-                                        <Icon name="ios-basket" size={60} color='rgba(246, 36, 89, 5)' />
-                                        <Text style={styles.cardText}>Order</Text>
+                                <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
+                                    <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
+                                            <Icon name="ios-cube" size={60} color='rgba(246, 36, 89, 5)' />
+                                            <Text style={styles.cardText}>Orders</Text>
+                                    </View>
                                 </View>
-                            </View>
-                            <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
-                                <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
-                                        <Icon name="ios-albums" size={60} color='rgba(246, 36, 89, 5)'/>
-                                        <Text style={styles.cardText}>Wishlist</Text>
-                                </View>
-                            </View>
-                        </View>
-                        <View style={{ flex: 1, flexDirection: 'row', marginTop: 40, paddingHorizontal: 30, justifyContent: 'space-around'}}>
                             <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
                                 <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
                                         <Icon name="ios-desktop" size={60} color='rgba(246, 36, 89, 5)'/>
                                         <Text style={styles.cardText}>Customer Service</Text>
                                 </View>
                             </View>
+                        </View>
+                        <View style={{ flex: 1, flexDirection: 'row', marginTop: 40, paddingHorizontal: 30, justifyContent: 'space-around'}}>
                             <TouchableOpacity onPress={this.signOutUser}>
                             <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
                                 <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
@@ -86,10 +80,8 @@ class Profile extends Component{
                             </View>
                             </TouchableOpacity>
                         </View>
-
                     </ScrollView>
-
-
+                    
                 </View>
             </SafeAreaView>
         );

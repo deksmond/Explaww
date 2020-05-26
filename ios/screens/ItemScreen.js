@@ -23,17 +23,15 @@ export default class ItemScreen extends Component {
             </View>
 
             <View style={styles.text}>
-              <Text style={{ fontSize: 22, paddingHorizontal: 5 }}>Camouflag military street wear jacket</Text>
-              <Text style={{ fontSize: 22, fontWeight: '700', paddingTop: 10, paddingHorizontal: 5 }}>DZD 9000</Text>
-              <Text style={{ fontSize: 22, fontWeight: '500', paddingTop: 10, paddingHorizontal: 5 }}>Delivery fee: DZD 900</Text>
-              <Text style={{ fontSize: 22, paddingTop: 10, paddingHorizontal: 5}}>Sold by "SELLER"</Text>
+              <Text style={{ fontSize: 20, fontWeight: "700" }}>Dzd 4000</Text>
+              <Text style={{ fontSize: 18, paddingTop: 15 }}>Vans old school black semi rounded sunglasses</Text>
+              <Text style={{ fontSize: 17, paddingTop: 10 }}>Delivery fee: DZD 900</Text>
            </View>
 
-           <View style={{flex: 1, flexDirection: 'row', justifyContent:'center', paddingTop: 20}}>
-              <TouchableOpacity style={{borderRadius: 5,justifyContent:'center', height: 30, width: 150, margin: 10, backgroundColor:'gold'}}>
-                <Text style={{color: 'black', textAlign:'center', fontSize: 24}}>Order</Text>
+              <TouchableOpacity style={styles.button}>
+                <Text style={{color: '#FFF', textAlign:'center', fontSize: 20}}>BUY NOW</Text>
               </TouchableOpacity>
-           </View>
+
         </ScrollView>
     );
   }
@@ -52,7 +50,17 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     text: {
-      marginTop: 35,
-      paddingTop: 45
+      marginTop: 45,
+      paddingTop: 45,
+      paddingHorizontal: 15
+    },
+    button: {
+        backgroundColor:'#E9446A',
+        marginTop: 30,
+        marginHorizontal: 30,
+        borderRadius: 5,
+        height: 52,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 });
