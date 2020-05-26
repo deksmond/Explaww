@@ -138,24 +138,24 @@ class Home extends Component{
 
                             <View style={{marginTop: 20, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
                                 <View style={{ width: width / 2 - 30, height: width / 2 - 30, borderWidth: 0.5, borderColor: '#dddddd', paddingBottom: 5, marginTop: 20 }}>
-                                    <View style={{ flex: 3 }}>
+                                    <View style={{ flex: 4 }}>
                                         <Image source={require('./img/socks.jpg')} 
                                             style={{flex: 1, width: null, height: null, resizeMode: 'cover' }}
                                         />
                                     </View>
-                                    <View style={{ flex: 2, alignItems: 'flex-start', justifyContent: 'space-evenly', paddingLeft: 10 }}>
+                                    <View style={{ flex: 3, alignItems: 'flex-start', justifyContent: 'space-evenly', paddingLeft: 10 }}>
                                         <Text style={{ fontSize: 15, fontWeight:'bold'}}>Dzd 1500</Text>
                                         <Text style={{fontSize: 14}}>Van Gogh mural socks</Text>
                                     </View>
                                 </View>
 
                                 <View style={{ width: width / 2 - 30, height: width / 2 - 30, borderWidth: 0.5, borderColor: '#dddddd', marginTop: 20 }}>
-                                    <View style={{ flex: 3 }}>
+                                    <View style={{ flex: 4 }}>
                                         <Image source={require('./img/tj.jpg')} 
                                             style={{flex: 1, width: null, height: null, resizeMode: 'cover'}}
                                         />
                                     </View>
-                                    <View style={{ flex: 2, alignItems: 'flex-start', justifyContent: 'space-evenly', paddingLeft: 10 }}>
+                                    <View style={{ flex: 3, alignItems: 'flex-start', justifyContent: 'space-evenly', paddingLeft: 10 }}>
                                         <Text style={{ fontSize: 15, fontWeight:'bold'}}>Dzd 500</Text>
                                         <Text style={{fontSize: 14}}>Tom and Jerry leather passport cover</Text>
                                     </View>
@@ -165,24 +165,24 @@ class Home extends Component{
                             <View style={{marginTop: 20, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
 
                                 <View style={{ width: width / 2 - 30, height: width / 2 - 30, borderWidth: 0.5, borderColor: '#dddddd'}}>
-                                    <View style={{ flex: 3 }}>
+                                    <View style={{ flex: 4 }}>
                                         <Image source={require('./img/joker.jpg')} 
                                             style={{flex: 1, width: null, height: null, resizeMode: 'cover'}}
                                         />
                                     </View>
-                                    <View style={{ flex: 2, alignItems: 'flex-start', justifyContent: 'space-evenly', paddingLeft: 10 }}>
+                                    <View style={{ flex: 3, alignItems: 'flex-start', justifyContent: 'space-evenly', paddingLeft: 10 }}>
                                         <Text style={{ fontSize: 15, fontWeight:'bold'}}>Dzd 2500</Text>
                                         <Text style={{fontSize: 14}}>Joker behance silicone cover</Text>
                                     </View>
                                 </View>
 
                                 <View style={{ width: width / 2 - 30, height: width / 2 - 30, borderWidth: 0.5, borderColor: '#dddddd'}}>
-                                    <View style={{ flex: 3 }}>
+                                    <View style={{ flex: 4 }}>
                                         <Image source={require('./img/tote.jpg')} 
                                             style={{flex: 1, width: null, height: null, resizeMode: 'cover'}}
                                         />
                                     </View>
-                                    <View style={{ flex: 2, alignItems: 'flex-start', justifyContent: 'space-evenly', paddingLeft: 10 }}>
+                                    <View style={{ flex: 3, alignItems: 'flex-start', justifyContent: 'space-evenly', paddingLeft: 10 }}>
                                         <Text style={{ fontSize: 15, fontWeight:'bold'}}>Dzd 3000</Text>
                                         <Text style={{fontSize: 14}}>Sesame Street women's luxury shoulder bag</Text>
                                     </View>
