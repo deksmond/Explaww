@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   inner: {
     width: '100%',
     height: '100%',
-    backgroundColor: 'rgba(223, 170, 57, .6)'
+    backgroundColor: 'rgba(246, 36, 89, .2)'
   },
   paragraph: {
     textAlign: 'center',
