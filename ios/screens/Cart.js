@@ -13,7 +13,7 @@ class Cart extends Component{
     render(){
         return (
             <SafeAreaView style={{ flex: 1 }}>
-                <View style={{ flex: 1 ,paddingTop: 5 }}> 
+                <View style={{ flex: 1 ,paddingTop: 5, color: "#FFF"  }}> 
                     <View style={{alignItems: 'center'}}>
                         <Text style={{ fontSize: 18, fontWeight:'700' }}>
                             "Cart"

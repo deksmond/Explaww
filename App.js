@@ -17,6 +17,7 @@ import Cart from './ios/screens/Cart'
 import Profile from './ios/screens/Profile'
 
 import ItemScreen from './ios/screens/ItemScreen'
+import ProductScreen from './ios/screens/ProductScreen'
 
 import * as firebase from 'firebase'
 
@@ -96,7 +97,8 @@ const AppTabNavigator = createMaterialBottomTabNavigator(
     barStyle: { backgroundColor: '#fff'},
   },
   {
-    Item: ItemScreen
+    Item: ItemScreen,
+    Product: ProductScreen
   }
   
 );
@@ -107,7 +109,8 @@ const AuthStack = createStackNavigator({
 });
 
 const TabStack = createStackNavigator({
-    Item: ItemScreen
+    Item: ItemScreen,
+    Product: ProductScreen
 });
 
 export default createAppContainer(

@@ -62,16 +62,21 @@ class Home extends Component{
                                     horizontal={true}
                                     showsHorizontalScrollIndicator={false}
                                  >
+
                                      <TouchableOpacity onPress={() => this.props.navigation.navigate("Item")}>
-                                    <Category imageUri={require('./img/vgs.jpg')}
-                                    price="Dzd 5000" 
-                                    name="Vans glasses"
-                                    />
+                                        <Category imageUri={require('./img/vgs.jpg')}
+                                        price="Dzd 5000" 
+                                        name="Vans glasses"
+                                        />
                                     </TouchableOpacity>
-                                    <Category imageUri={require('./img/5.jpg')}
-                                    price="Dzd 2500"
-                                    name="Dior cross bag"
-                                    />
+
+                                    <TouchableOpacity onPress={() => this.props.navigation.navigate("Product")}>
+                                        <Category imageUri={require('./img/5.jpg')}
+                                        price="Dzd 2500"
+                                        name="Dior cross bag"
+                                        />
+                                    </TouchableOpacity>
+
                                     <Category imageUri={require('./img/belt.jpeg')}
                                     price="Dzd 4000"
                                     name="Mischf belt"
