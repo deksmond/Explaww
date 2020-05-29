@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import { Dropdown } from 'react-native-material-dropdown'
 
 export default class ItemScreen extends Component {
+
   static navigationOptions = {
     headerShown: false
   };
@@ -24,7 +25,7 @@ export default class ItemScreen extends Component {
           <ScrollView>
             <View>
                 <Image 
-                  style={{width: '100%', height: '100%'}}
+                  style={{width: '100%', height: '120%' }}
                   source={require('./img/vgs.jpg')}
                 />
 
@@ -66,8 +67,8 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     text: {
-      marginTop: 45,
-      paddingTop: 45,
+      marginTop: 25,
+      paddingTop: 55,
       paddingHorizontal: 15
     },
     button: {
