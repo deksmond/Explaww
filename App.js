@@ -16,8 +16,9 @@ import Events from './ios/screens/Events'
 import Cart from './ios/screens/Cart'
 import Profile from './ios/screens/Profile'
 
-import ItemScreen from './ios/screens/ItemScreen'
-import ProductScreen from './ios/screens/ProductScreen'
+import ItemScreen from './ios/screens/subScreens/ItemScreen'
+import ProductScreen from './ios/screens/subScreens/ProductScreen'
+import EventScreen from './ios/screens/subScreens/EventScreen'
 
 import * as firebase from 'firebase'
 
@@ -98,9 +99,9 @@ const AppTabNavigator = createMaterialBottomTabNavigator(
   },
   {
     Item: ItemScreen,
-    Product: ProductScreen
+    Product: ProductScreen,
+    Event: EventScreen
   }
-  
 );
 
 const AuthStack = createStackNavigator({
@@ -110,7 +111,8 @@ const AuthStack = createStackNavigator({
 
 const TabStack = createStackNavigator({
     Item: ItemScreen,
-    Product: ProductScreen
+    Product: ProductScreen,
+    Event: EventScreen
 });
 
 export default createAppContainer(

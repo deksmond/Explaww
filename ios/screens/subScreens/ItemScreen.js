@@ -3,20 +3,31 @@ import { Text, View, Image, SafeAreaView, ScrollView, StyleSheet, Button, Toucha
 import Icon from 'react-native-vector-icons/Ionicons'
 import { Dropdown } from 'react-native-material-dropdown'
 
-export default class ProductScreen extends Component {
+export default class ItemScreen extends Component {
 
   static navigationOptions = {
     headerShown: false
   };
 
   render() {
+
+  let data = [{
+    value: 'Black',
+  },
+  {
+    value: 'Blue',
+  },
+  {
+  value: 'White'
+  }];
+
     return(
         <SafeAreaView style={{ flex: 1 }}>
           <ScrollView>
             <View>
                 <Image 
                   style={{width: '100%', height: '120%' }}
-                  source={require('./img/5.jpg')}
+                  source={require('../img/vgs.jpg')}
                 />
 
               <TouchableOpacity style={styles.backButton} onPress={() => this.props.navigation.navigate("Home")}>
@@ -26,10 +37,11 @@ export default class ProductScreen extends Component {
             </View>
 
             <View style={styles.text}>
-                <Text style={{ fontSize: 20, fontWeight: "700" }}>Dzd 150000</Text>
-                <Text style={{ fontSize: 18, paddingTop: 15 }}>Dior SE GOYARD crossbody bag with slim strap & buckle </Text>
+                <Text style={{ fontSize: 20, fontWeight: "700" }}>Dzd 4000</Text>
+                <Text style={{ fontSize: 18, paddingTop: 15 }}>Vans old school black semi rounded sunglasses</Text>
                   <Dropdown
-                    label='Black'
+                    label='Colour'
+                    data={data}
                   />
                 <Text style={{ fontSize: 17, paddingTop: 10 }}>Delivery fee: DZD 900</Text>
               <TouchableOpacity style={styles.button}>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 
 import EventsCategory from './Components/Events/EventsCategory'
 
@@ -24,10 +24,12 @@ class Events extends Component{
                     
 
                     <ScrollView>
-                        <EventsCategory imageUri={require('../screens/img/af1.jpg')} 
-                        name="Nike fest"
-                        date="12 October, 2020"
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate("Event")}>
+                            <EventsCategory imageUri={require('../screens/img/af1.jpg')} 
+                            name="Nike fest"
+                            date="12 October, 2020"
                         />
+                        </TouchableOpacity>
                         <EventsCategory imageUri={require('../screens/img/lag.jpg')} 
                         name="Christmas fiesta"
                         date="25 September, 2020"
