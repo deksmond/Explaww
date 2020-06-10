@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, SafeAreaView, Dimensions, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
-
-import Icon from 'react-native-vector-icons/Ionicons'
+import Icon from 'react-native-vector-icons/Ionicons';
+import { Linking } from 'react-native';
 
 import * as firebase from 'firebase'
 
@@ -24,22 +24,15 @@ class Profile extends Component{
         firebase.auth().signOut();
     }
     
-    UNSAFE_componentWillMount(){
-        this.starterHeaderHeight = 10
-        if(Platform.OS == 'android'){
-            this.starterHeaderHeight = 100 + StatusBar.currentHeight
-        }
-    }
+    
     render(){
         return (
             <SafeAreaView style={{ flex: 1 }}>
-                <View style={{ flex: 1 ,paddingTop: 5 }}> 
-                    <View style={{ alignItems: 'center' }}>
-                        <Text style={{ fontSize: 18, fontWeight:'700' }}>
-                            "Profile"
+
+                    <View style={styles.header}>
+                        <Text style={{ fontSize: 18, fontWeight:'700', marginTop: 5 }}>
+                            Profile
                         </Text>
-                    </View>
-                    <View style={{height:this.starterHeaderHeight, backgroundColor:'white', borderBottomColor:'#dddddd', borderBottomWidth: 1 }}>
                     </View>
 
                     <ScrollView> 
@@ -63,14 +56,19 @@ class Profile extends Component{
                                             <Text style={styles.cardText}>Orders</Text>
                                     </View>
                                 </View>
+                            <TouchableOpacity onPress={() => Linking.openURL('mailto: support@eureka.com')} title="support@eureka.com">
                             <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
                                 <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
                                         <Icon name="ios-desktop" size={60} color='rgba(246, 36, 89, 5)'/>
                                         <Text style={styles.cardText}>Customer Service</Text>
                                 </View>
                             </View>
+                            </TouchableOpacity>
+
                         </View>
+
                         <View style={{ flex: 1, flexDirection: 'row', marginTop: 40, paddingHorizontal: 30, justifyContent: 'space-around'}}>
+
                             <TouchableOpacity onPress={this.signOutUser}>
                             <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
                                 <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
@@ -79,10 +77,10 @@ class Profile extends Component{
                                 </View>
                             </View>
                             </TouchableOpacity>
+
                         </View>
+
                     </ScrollView>
-                    
-                </View>
             </SafeAreaView>
         );
     }
@@ -91,6 +89,12 @@ class Profile extends Component{
 export default Profile;
 
 const styles = StyleSheet.create ({
+    header: {
+        height: 40, 
+        alignItems: 'center', 
+        borderBottomColor:'#dddddd', 
+        borderBottomWidth: 1
+    },
     txt: {
         color: 'white',
         textAlign: 'center',

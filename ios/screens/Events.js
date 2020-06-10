@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Platform, StatusBar } from 'react-native';
 
 import EventsCategory from './Components/Events/EventsCategory'
 
 class Events extends Component{
-    UNSAFE_componentWillMount(){
-        this.starterHeaderHeight = 10
-        if(Platform.OS == 'android'){
-            this.starterHeaderHeight = 100 + StatusBar.currentHeight
-        }
-    }
     render(){
         return (
             <SafeAreaView style={{ flex: 1 }}>
-                <View style={{ flex: 1 ,paddingTop: 5 }}> 
-                    <View style={{alignItems: 'center'}}>
-                        <Text style={{ fontSize: 18, fontWeight:'700' }}>
-                            "Events"
+
+                <View style={styles.header}>
+                        <Text style={{ fontSize: 18, fontWeight:'700', marginTop: 5 }}>
+                            Events
                         </Text>
-                    </View>
-                    <View style={{height:this.starterHeaderHeight, backgroundColor:'white', borderBottomColor:'#dddddd', borderBottomWidth: 1}}>
-                    </View>
+                </View>
                     
 
-                    <ScrollView>
+                <ScrollView>
                         <TouchableOpacity onPress={() => this.props.navigation.navigate("Event")}>
                             <EventsCategory imageUri={require('../screens/img/af1.jpg')} 
                             name="Nike fest"
@@ -66,8 +58,8 @@ class Events extends Component{
                         name="Cypher challenge"
                         date="20 September, 2021"
                         />
+
                     </ScrollView>
-                </View>
             </SafeAreaView>
         );
     } 
@@ -81,5 +73,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    header: {
+        height: 40, 
+        alignItems: 'center', 
+        borderBottomColor:'#dddddd', 
+        borderBottomWidth: 1
     }
 });

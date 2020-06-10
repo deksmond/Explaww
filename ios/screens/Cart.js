@@ -4,26 +4,17 @@ import { Card, CardItem, Body, Left } from 'native-base';
 
 
 class Cart extends Component{
-    UNSAFE_componentWillMount(){
-        this.starterHeaderHeight = 10
-        if(Platform.OS == 'android'){
-            this.starterHeaderHeight = 100 + StatusBar.currentHeight
-        }
-    }
     render(){
         return (
             <SafeAreaView style={{ flex: 1 }}>
-                <View style={{ flex: 1 ,paddingTop: 5, color: "#FFF"  }}> 
-                    <View style={{alignItems: 'center'}}>
-                        <Text style={{ fontSize: 18, fontWeight:'700' }}>
-                            "Cart"
+                
+                <View style={styles.header}>
+                        <Text style={{ fontSize: 18, fontWeight:'700', marginTop: 5 }}>
+                            Cart
                         </Text>
-                    </View>
-                    
-                    <View style={{height:this.starterHeaderHeight, backgroundColor:'white', borderBottomColor:'#dddddd', borderBottomWidth: 1}}>
-                    </View>
+                </View>
 
-                    <ScrollView>
+                <ScrollView>
                         <Card style={{ height: 130, paddingTop: 5 }}>
                             <CardItem>
                                 <Left>
@@ -131,11 +122,20 @@ class Cart extends Component{
                                     </Left>
                                 </CardItem>         
                         </Card>
-                    </ScrollView>
-                </View>
+
+                </ScrollView>
             </SafeAreaView>
         );
     }
 }
 
 export default Cart;
+
+const styles = StyleSheet.create({
+    header: {
+        height: 40, 
+        alignItems: 'center', 
+        borderBottomColor:'#dddddd', 
+        borderBottomWidth: 1
+    }
+});

@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, SafeAreaView, ImageBackground, Platform, StatusBar } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, SafeAreaView, ImageBackground } from 'react-native';
 
-class Location extends Component{
-    UNSAFE_componentWillMount(){
-        this.starterHeaderHeight = 10
-        if(Platform.OS == 'android') {
-            this.starterHeaderHeight = 100 + StatusBar.currentHeight
-        }
-    }
+class Location extends Component{    
     render(){
         return (
             <SafeAreaView style={{ flex: 1 }}>
-                <View style={{ flex: 1 ,paddingTop: 5 }}> 
-                    <View style={{alignItems: 'center'}}>
-                        <Text style={{ fontSize: 18, fontWeight:'700' }}>
-                            "Shops around you"
+               
+                <View style={styles.header}>
+                        <Text style={{ fontSize: 18, fontWeight:'700', marginTop: 5 }}>
+                            Location
                         </Text>
-                    </View>
-                    <View style={{height:this.starterHeaderHeight, backgroundColor:'white', borderBottomColor:'#dddddd', borderBottomWidth: 1}}>
-                    </View>
-                    <ScrollView>
+                </View>
+
+                <ScrollView>
                         <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 10, paddingTop: 25, justifyContent: 'space-between'}}>
 
                             <View style={{ height: 150, width: 125, borderRadius: 10}}>
@@ -136,14 +129,20 @@ class Location extends Component{
 
 
                         </View>
+
                     </ScrollView>
-                </View>
             </SafeAreaView>
         );
     }
 }
 
 const styles = StyleSheet.create({
+    header: {
+        height: 40, 
+        alignItems: 'center', 
+        borderBottomColor:'#dddddd', 
+        borderBottomWidth: 1
+    },
     imgContainer: {
       flex: 1, 
       height:null, 

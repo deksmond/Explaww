@@ -16,9 +16,12 @@ import Events from './ios/screens/Events'
 import Cart from './ios/screens/Cart'
 import Profile from './ios/screens/Profile'
 
-import ItemScreen from './ios/screens/subScreens/ItemScreen'
-import ProductScreen from './ios/screens/subScreens/ProductScreen'
-import EventScreen from './ios/screens/subScreens/EventScreen'
+import ItemScreen from './ios/screens/routes/ItemScreen'
+import EventScreen from './ios/screens/routes/EventScreen'
+import CheckoutScreen from './ios/screens/routes/CheckoutScreen'
+import Store from './ios/screens/routes/StoreScreen'
+import StoreScreen from './ios/screens/routes/StoreScreen'
+import ProductScreen from './ios/screens/routes/ProductScreen'
 
 import * as firebase from 'firebase'
 
@@ -95,12 +98,7 @@ const AppTabNavigator = createMaterialBottomTabNavigator(
   {
     activeColor: 'red',
     inactiveColor: 'grey',
-    barStyle: { backgroundColor: '#fff'},
-  },
-  {
-    Item: ItemScreen,
-    Product: ProductScreen,
-    Event: EventScreen
+    barStyle: { backgroundColor: '#fff'}
   }
 );
 
@@ -109,10 +107,12 @@ const AuthStack = createStackNavigator({
   Login: LoginScreen
 });
 
-const TabStack = createStackNavigator({
+const RouteStack = createStackNavigator({
     Item: ItemScreen,
-    Product: ProductScreen,
-    Event: EventScreen
+    Event: EventScreen,
+    Checkout: CheckoutScreen,
+    Store: StoreScreen,
+    Product: ProductScreen
 });
 
 export default createAppContainer(
@@ -120,7 +120,7 @@ export default createAppContainer(
     {
       Loading: LoadingScreen,
       App: AppTabNavigator,
-      Tab: TabStack,
+      Routes: RouteStack,
       Auth: AuthStack
     }, 
     {
