@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, SafeAreaView, Dimensions, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, SafeAreaView, Dimensions, ImageBackground, StyleSheet, TouchableOpacity, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Linking } from 'react-native';
+
 
 import * as firebase from 'firebase'
 

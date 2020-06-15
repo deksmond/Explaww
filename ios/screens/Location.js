@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, SafeAreaView, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, SafeAreaView, ImageBackground, TouchableOpacity } from 'react-native';
 
 class Location extends Component{    
     render(){
@@ -15,15 +15,17 @@ class Location extends Component{
                 <ScrollView>
                         <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 10, paddingTop: 25, justifyContent: 'space-between'}}>
 
-                            <View style={{ height: 150, width: 125, borderRadius: 10}}>
-                                <ImageBackground source={require('./img/alger.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
-                                    <View style={styles.layout}>
-                                        <Text style={styles.imgTxt}>
-                                        Alger
-                                        </Text>
-                                    </View>
-                                </ImageBackground>
-                            </View>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate("Places")}>
+                                <View style={{ height: 150, width: 125, borderRadius: 10}}>
+                                    <ImageBackground source={require('./img/alger.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
+                                        <View style={styles.layout}>
+                                            <Text style={styles.imgTxt}>
+                                            Alger
+                                            </Text>
+                                        </View>
+                                    </ImageBackground>
+                                </View>
+                            </TouchableOpacity>
 
                             <View style={{ height: 150, width: 125, borderRadius: 10}}>
                                 <ImageBackground source={require('./img/annaba.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
