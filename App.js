@@ -23,6 +23,7 @@ import ProductScreen from './ios/screens/routes/ProductScreen'
 import PlacesScreen from './ios/screens/routes/PlacesScreen'
 import OrderScreen from './ios/screens/routes/OrderScreen'
 import CheckoutScreen from './ios/screens/routes/CheckoutScreen'
+import EventScreen from './ios/screens/routes/EventScreen'
 
 import * as firebase from 'firebase'
 
@@ -114,7 +115,8 @@ const RouteStack = createStackNavigator({
     Product: ProductScreen,
     Places: PlacesScreen,
     order: OrderScreen,
-    Checkout: CheckoutScreen
+    Checkout: CheckoutScreen,
+    event: EventScreen
 });
 
 export default createAppContainer(

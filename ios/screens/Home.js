@@ -147,7 +147,7 @@ class Home extends Component{
 
                         <View style={{marginTop: 40}}>
                             <Text style={{fontSize: 24, fontWeight: '700', paddingHorizontal: 20 }}>
-                                Market place
+                                Marketplace
                             </Text>
                                 
                             <View style={{marginTop: 25, marginBottom: 100, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>

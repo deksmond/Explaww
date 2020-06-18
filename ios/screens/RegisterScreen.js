@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Linking } from 'react-native';
 
 import * as firebase from 'firebase'
 
@@ -71,13 +71,13 @@ handleSignUp = () => {
 
                 <TouchableOpacity style={{ alignSelf: "center", marginTop: 32 }} onPress={() => this.props.navigation.navigate("Login")}>
                     <Text style={{ color:"#414959", fontSize: 13 }}>
-                        Already have an account?<Text style={{ color:"#E9446A", fontWeight:"500" }}>Sign in</Text>
+                    Click here to <Text style={{ color:"#E9446A", fontWeight:"500" }}>Sign in</Text>
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={{ alignSelf: "center", marginTop: 80 }} onPress={() => this.props.navigation.navigate("Home")}>
+                <TouchableOpacity style={{ alignSelf: "center", marginTop: 80 }} onPress={() => Linking.openURL('https://www.google.com')}>
                     <Text style={{ color:"#414959", fontSize: 13 }}>
-                        Oh you're window shopping?<Text style={{ color:"#E9446A", fontWeight:"500" }}>Click here</Text>
+                    Click <Text style={{ color:"#E9446A", fontWeight:"500" }}>here</Text> to read our Privacy and Policy agreement
                     </Text>
                 </TouchableOpacity>
 

@@ -34,7 +34,7 @@ decrementCounter = () => {
           <ScrollView>
             <View>
                 <Image 
-                  style={{width: '100%', height: '120%' }}
+                  style={{ width: '100%', height: '120%' }}
                   source={require('../img/AJ1.jpg')}
                 />
 
