@@ -1,141 +1,114 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ScrollView, SafeAreaView, StyleSheet } from 'react-native';
-import { Card, CardItem, Body, Left } from 'native-base';
+import { View, Text, Image, SafeAreaView, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 
+posts = [
+    {
+        id: "1",
+        price: "Dzd 3000",
+        title: "Sesame Street women's luxury shoulder tote bag",
+        avatar: require('./img/tote.jpg')
+    },
+    {
+        id: "2",
+        price: "Dzd 2271",
+        title: "Rimmel London Volume Colourist Mascara Black",
+        avatar: require('./img/mascara.jpg')
+    },
+    {
+        id: "3",
+        price: "Dzd 995",
+        title: "Yes to Coconuts Ultra Hydrating Paper Mask",
+        avatar: require('./img/face.jpg')
+    },
+    {
+        id: "4",
+        price: "Dzd 17000",
+        title: "Adidas Net EQT sneakers",
+        avatar: require('./img/adidas.jpeg')
+    },
+    {
+        id: "5",
+        price: "Dzd 2500",
+        title: "Bershka transparent glasses",
+        avatar: require('./img/glasses.jpeg')
+    },
+    {
+        id: "6",
+        price: "Dzd 25000",
+        title: "Black Nike Air Force 1",
+        avatar: require('./img/14.jpeg')
+    }
+];
 
-class Cart extends Component{
-    render(){
+export default class Cart extends Component {
+
+    renderPost = post => {
+        return(
+            <TouchableOpacity>
+                <View style={styles.feedItem}>
+                    <Image source={post.avatar} style={styles.avatar} />
+                    <View style={{ flex: 1 }}>
+                        <View style={{ flexDirection: "column", justifyContent: "space-between", alignItems: "flex-start" }}>
+                            <Text style={styles.price}>{post.price}</Text>
+                            <Text style={styles.title}>{post.title}</Text>                    
+                        </View>
+                    </View>  
+                </View>
+            </TouchableOpacity>
+        );
+    };
+
+    render() {
         return (
             <SafeAreaView style={{ flex: 1 }}>
-                
-                <View style={styles.header}>
-                        <Text style={{ fontSize: 18, fontWeight:'700', marginTop: 5 }}>
+
+                    <View style={styles.header}>
+                        <Text style={{ fontSize: 18, fontWeight: '700', marginTop: 5 }}>
                             Cart
                         </Text>
-                </View>
+                    </View>
 
-                <ScrollView>
-                    <Card style={{ height: 130, paddingTop: 5, borderRadius: 20 }}>
-                        <CardItem>
-                            <Left>
-                                <View style={{flex: 1, flexDirection: 'row', paddingHorizontal: 5}}>
-                                    <View style={{ width: 90, height: 90 }}>
-                                        <Image source={require('../screens/img/tote.jpg')} 
-                                            style={{flex:1, width:null, height: null, resizeMode: 'cover'}} 
-                                         />
-                                    </View>
-                                    <Body>
-                                        <Text style={{ fontSize: 18, paddingHorizontal: 15, fontWeight: 'bold'}}>Dzd 3,000</Text>
-                                        <Text style={{ fontSize: 16, paddingHorizontal: 15, paddingTop: 5}}>Sesame Street women's luxury shoulder tote bag</Text>
-                                    </Body>
-                                </View>
-                            </Left>
-                        </CardItem>
-                    </Card>
-                                
-                    <Card style={{ height: 130, paddingTop: 5, borderRadius: 20 }}>
-                        <CardItem>
-                            <Left>
-                                <View style={{flex: 1, flexDirection: 'row', paddingHorizontal: 5}}>
-                                    <View style={{ width: 90, height: 90 }}>
-                                        <Image source={require('../screens/img/mascara.jpg')} 
-                                            style={{flex:1, width:null, height: null, resizeMode: 'cover'}} 
-                                        />
-                                    </View>
-                                     <Body>
-                                         <Text style={{ fontSize: 18, paddingHorizontal: 15, fontWeight: 'bold'}}>Dzd 2,271</Text>
-                                        <Text style={{ fontSize: 16, paddingHorizontal: 15, paddingTop: 5}}>Rimmel London Volume Colourist Mascara Black</Text>
-                                    </Body>
-                                </View>
-                            </Left>
-                        </CardItem>
-                    </Card>
+                    <FlatList 
+                        style={styles.feed} 
+                        data={posts} 
+                        renderItem={({item}) => this.renderPost(item)} 
+                        keyExtractor={item => item.id} 
+                    />
 
-                    <Card style={{ height: 130, paddingTop: 5, borderRadius: 20 }}>
-                        <CardItem>
-                            <Left>
-                                <View style={{flex: 1, flexDirection: 'row', paddingHorizontal: 5}}>
-                                    <View style={{ width: 90, height: 90 }}>
-                                        <Image source={require('../screens/img/face.jpg')} 
-                                            style={{flex:1, width:null, height: null, resizeMode: 'cover'}} 
-                                        />
-                                    </View>
-                                    <Body>
-                                        <Text style={{ fontSize: 18, paddingHorizontal: 15, fontWeight: 'bold'}}>DZD 995</Text>
-                                        <Text style={{ fontSize: 16, paddingHorizontal: 15, paddingTop: 5}}>Yes to Coconuts Ultra Hydrating Paper Mask</Text>
-                                    </Body>
-                                </View>
-                            </Left>
-                        </CardItem>
-                    </Card>
-
-                    <Card style={{ height: 130, paddingTop: 5, borderRadius: 20 }}>
-                        <CardItem>
-                            <Left>
-                                <View style={{flex: 1, flexDirection: 'row', paddingHorizontal: 5}}>
-                                    <View style={{ width: 90, height: 90 }}>
-                                        <Image source={require('../screens/img/adidas.jpeg')} 
-                                            style={{flex:1, width:null, height: null, resizeMode: 'cover'}} 
-                                        />
-                                    </View>
-                                    <Body>
-                                        <Text style={{ fontSize: 18, paddingHorizontal: 15, fontWeight: 'bold'}}>DZD 17,000</Text>
-                                        <Text style={{ fontSize: 16, paddingHorizontal: 15, paddingTop: 5}}>Adidas Net EQT sneakers</Text>
-                                    </Body>
-                                </View>
-                            </Left>
-                        </CardItem>
-                    </Card>
-
-                    <Card style={{ height: 130, paddingTop: 5, borderRadius: 20 }}>
-                        <CardItem>
-                            <Left>
-                                <View style={{flex: 1, flexDirection: 'row', paddingHorizontal: 5}}>
-                                    <View style={{ width: 90, height: 90 }}>
-                                        <Image source={require('../screens/img/glasses.jpeg')} 
-                                            style={{flex:1, width:null, height: null, resizeMode: 'cover'}} 
-                                        />
-                                    </View>
-                                    <Body>
-                                        <Text style={{ fontSize: 18, paddingHorizontal: 15, fontWeight: 'bold'}}>DZD 2,500</Text>
-                                        <Text style={{ fontSize: 16, paddingHorizontal: 15, paddingTop: 5}}>Bershka transparent glasses</Text>
-                                    </Body>
-                                </View>
-                            </Left>
-                        </CardItem>
-                    </Card>                   
-
-                    <Card style={{ height: 130, paddingTop: 5, borderRadius: 20 }}>
-                        <CardItem>
-                            <Left>
-                                <View style={{flex: 1, flexDirection: 'row', paddingHorizontal: 5}}>
-                                    <View style={{ width: 90, height: 90 }}>
-                                        <Image source={require('../screens/img/14.jpeg')} 
-                                            style={{flex:1, width:null, height: null, resizeMode: 'cover'}} 
-                                        />
-                                    </View>
-                                    <Body>
-                                        <Text style={{ fontSize: 18, paddingHorizontal: 15, fontWeight: 'bold'}}>DZD 25,000</Text>
-                                        <Text style={{ fontSize: 16, paddingHorizontal: 15, paddingTop: 5}}>Black Nike Air Force 1</Text>
-                                    </Body>
-                                </View>
-                            </Left>
-                        </CardItem>         
-                    </Card>
-
-                </ScrollView>
             </SafeAreaView>
         );
     }
 }
 
-export default Cart;
 
 const styles = StyleSheet.create({
     header: {
         height: 40, 
-        alignItems: 'center', 
-        borderBottomColor:'#dddddd', 
+        alignItems: 'center',
+        borderBottomColor: '#dddddd',
         borderBottomWidth: 1
+    },
+    feed: {
+        marginHorizontal: 15
+    },
+    feedItem: {
+        backgroundColor: "#FFF",
+        borderRadius: 20,
+        padding: 8,
+        flexDirection: "row",
+        marginVertical: 8
+    },
+    avatar: {
+        width: 90, 
+        height: 90,
+        marginRight: 16
+    },
+    price: {
+        fontSize: 18,
+        fontWeight: 'bold'
+    },
+    title: {
+        fontSize: 16,
+        paddingTop: 7
     }
 });

@@ -1,20 +1,15 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, SafeAreaView, ScrollView, Text, TouchableOpacity, Image } from 'react-native';
+
 
 export default class EventScreen extends React.Component{
     render(){
         return(
-            <View style={styles.container}>
-                <Text>Event screen</Text>
-            </View>
+            <SafeAreaView style={{ flex: 1 }}>
+                <ScrollView>
+                    <Image source={require('../img/artx.jpg')} />
+                </ScrollView>
+            </SafeAreaView>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center"
-    }
-});

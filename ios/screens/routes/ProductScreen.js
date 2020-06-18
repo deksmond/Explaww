@@ -45,8 +45,13 @@ decrementCounter = () => {
             </View>
 
             <View style={styles.text}>
-                <Text style={{ fontSize: 20, fontWeight: "700" }}>Dzd 31,500</Text>
+            <Text style={{ fontSize: 20, fontWeight: "700" }}>Dzd 31,500</Text>
+              <View style={{ flexDirection: "row" }}>
                 <Text style={{ fontSize: 18, paddingTop: 10 }}>Air Jordan 1 Retro High OG 'Obsidian'</Text>
+                <TouchableOpacity style={{ marginHorizontal: 30, marginTop: -20  }}>
+                    <Icon name="ios-heart-empty" size={30} />
+                </TouchableOpacity>
+              </View>
                   <Dropdown
                     label='Obsidian'
                   />

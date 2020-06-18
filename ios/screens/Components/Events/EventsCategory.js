@@ -7,19 +7,19 @@ class EventsCategory extends Component{
         return (
             <SafeAreaView style={{ flex:1 }}>
             <View style={{ flex:1 }}>
-            <ScrollView>
-                <Card>
-                    <CardItem>
-                        <Left>
-                            <Thumbnail source={this.props.imageUri} />
-                            <Body>
-                                <Text style={{fontSize: 20}}>{this.props.name}</Text>
-                                <Text style={{fontSize: 15,fontWeight:'bold'}}>{this.props.date}</Text>
-                            </Body>
-                        </Left>
-                    </CardItem>
-                </Card>
-            </ScrollView>
+                <ScrollView>
+                    <Card>
+                        <CardItem>
+                            <Left>
+                                <Thumbnail source={this.props.imageUri} />
+                                <Body>
+                                    <Text style={{fontSize: 20}}>{this.props.name}</Text>
+                                    <Text style={{fontSize: 15,fontWeight:'bold'}}>{this.props.date}</Text>
+                                </Body>
+                            </Left>
+                        </CardItem>
+                    </Card>
+                </ScrollView>
             </View>
             </SafeAreaView>
         );

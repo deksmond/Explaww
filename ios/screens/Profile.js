@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View, Text, ScrollView, SafeAreaView, Dimensions, ImageBackground, StyleSheet, TouchableOpacity, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-
 import * as firebase from 'firebase'
 
 const {height, width} = Dimensions.get('window')
@@ -50,12 +49,16 @@ class Profile extends Component{
                         </View>
 
                         <View style={{ flex: 1, flexDirection: 'row', marginTop: 50, paddingHorizontal: 30, justifyContent: 'space-around' }}>
+
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate("order")}>
                                 <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
                                     <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
                                             <Icon name="ios-cube" size={60} color='rgba(246, 36, 89, 5)' />
                                             <Text style={styles.cardText}>Orders</Text>
                                     </View>
                                 </View>
+                            </TouchableOpacity>
+
                             <TouchableOpacity onPress={() => Linking.openURL('mailto: support@eureka.com')} title="support@eureka.com">
                             <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
                                 <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>

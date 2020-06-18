@@ -57,7 +57,12 @@ export default class ItemScreen extends Component {
 
             <View style={styles.text}>
                 <Text style={{ fontSize: 20, fontWeight: "700" }}>Dzd 4,000</Text>
-                <Text style={{ fontSize: 18, paddingTop: 10 }}>Vans old school black semi rounded sunglasses</Text>
+                <View style={{ flexDirection: "row"}}>
+                  <Text style={{ fontSize: 18, paddingTop: 10 }}>Vans old school black semi rounded sunglasses</Text>
+                  <TouchableOpacity style={{ marginHorizontal: 30, marginTop: -20 }}>
+                    <Icon name="ios-heart-empty" size={30} />
+                  </TouchableOpacity>
+                </View>
                 <Dropdown
                   label='Colour'
                   data={data}

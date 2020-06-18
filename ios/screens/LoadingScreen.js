@@ -18,7 +18,6 @@ export default class App extends React.Component {
           <Text style={styles.paragraph}>
             EUREKA
           </Text>
-          <ActivityIndicator size="large"></ActivityIndicator>
         </View>
       </ImageBackground>
     );

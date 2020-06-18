@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image  } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity  } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 class Category extends Component{
     render(){
@@ -11,7 +12,12 @@ class Category extends Component{
                 </View>
                 <View style={{ paddingTop: 10 }}> 
                     <Text style={{ fontWeight: "800" }}>{this.props.price}</Text>
-                    <Text style={{ paddingTop: 4 }}>{this.props.name}</Text>
+                    <View style={{ flexDirection: "row" }}>
+                        <Text style={{ paddingTop: 4 }}>{this.props.name}</Text>
+                            <TouchableOpacity style={{ marginHorizontal: 20, marginTop: -20 }}>
+                                <Icon name="ios-heart-empty" size={24} />
+                            </TouchableOpacity>
+                    </View>
                 </View>
                                         
             </View>

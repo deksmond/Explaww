@@ -24,7 +24,7 @@ export default class StoreScreen extends React.Component{
                 </View>
 
                 <ScrollView>
-                    <View style={{marginTop: 25, marginBottom: 110, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                    <View style={{marginTop: 25, marginBottom: 110, paddingHorizontal: 15 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
                         
                         <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
                             <TouchableOpacity onPress={() => this.props.navigation.navigate("Product")}>
@@ -35,8 +35,13 @@ export default class StoreScreen extends React.Component{
                             </View>
                             </TouchableOpacity>
                             <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 31,500</Text>
-                                <Text style={{fontSize: 15, paddingTop: 5 }}>Air Jordan 1 Retro High OG 'Obsidian'</Text>
+                                <View style={{ flexDirection: "row" }}>
+                                    <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 31,500</Text>
+                                    <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                        <Icon name="ios-heart-empty" size={24} />
+                                    </TouchableOpacity>
+                                </View>
+                                    <Text style={{fontSize: 15, paddingTop: 5 }}>Air Jordan 1 Retro High OG 'Obsidian'</Text>
                             </View>
                         </View>
 
@@ -47,13 +52,18 @@ export default class StoreScreen extends React.Component{
                                 />
                             </View>
                             <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                <Text style={{ fontSize: 15, fontWeight:"800"}}>Dzd 72,000</Text>
+                                <View style={{ flexDirection: "row" }}>
+                                    <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 72,000</Text>
+                                    <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                        <Icon name="ios-heart-empty" size={24} />
+                                    </TouchableOpacity>
+                                </View>
                                 <Text style={{fontSize: 14, paddingTop: 5 }}>Travis Scott x Air Max 720 React ENG 'Cactus Trails'</Text>
                             </View>
                         </View>
                     </View>
 
-                    <View style={{marginTop: 20, marginBottom: 110, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                    <View style={{marginTop: 40, marginBottom: 110, paddingHorizontal: 15 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
 
                         <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
                             <View style={styles.imageSize}>
@@ -62,7 +72,12 @@ export default class StoreScreen extends React.Component{
                                 />
                             </View>
                             <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 65,000</Text>
+                                <View style={{ flexDirection: "row" }}>
+                                    <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 65,000</Text>
+                                    <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                        <Icon name="ios-heart-empty" size={24} />
+                                    </TouchableOpacity>
+                                </View>
                                 <Text style={{fontSize: 15, paddingTop: 5 }}>Nike Air Max 95 leather trainers in white</Text>
                             </View>
                         </View>
@@ -74,13 +89,18 @@ export default class StoreScreen extends React.Component{
                                 />
                             </View>
                             <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                <Text style={{ fontSize: 15, fontWeight:"800"}}>Dzd 25,500</Text>
+                                <View style={{ flexDirection: "row" }}>
+                                    <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 25,500</Text>
+                                    <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                        <Icon name="ios-heart-empty" size={24} />
+                                    </TouchableOpacity>
+                                </View>
                                 <Text style={{fontSize: 14, paddingTop: 5 }}>Nike Air Force 1 LV8 Utility SL trainers in black</Text>
                             </View>
                         </View>
                     </View>
 
-                    <View style={{marginTop: 20, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                    <View style={{marginTop: 40, paddingHorizontal: 15 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
 
                         <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
                             <View style={styles.imageSize}>
@@ -89,7 +109,12 @@ export default class StoreScreen extends React.Component{
                                 />
                             </View>
                             <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 24,840</Text>
+                                <View style={{ flexDirection: "row" }}>
+                                    <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 24,840</Text>
+                                    <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                        <Icon name="ios-heart-empty" size={24} />
+                                    </TouchableOpacity>
+                                </View>
                                 <Text style={{fontSize: 15, paddingTop: 5 }}>Nike Air Force 1 LV8 '07 4SP20 trainers in black</Text>
                             </View>
                         </View>
@@ -101,7 +126,12 @@ export default class StoreScreen extends React.Component{
                                 />
                             </View>
                             <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                <Text style={{ fontSize: 15, fontWeight:"800"}}>Dzd 24,840</Text>
+                                <View style={{ flexDirection: "row" }}>
+                                    <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 24,840</Text>
+                                    <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                        <Icon name="ios-heart-empty" size={24} />
+                                    </TouchableOpacity>
+                                </View>
                                 <Text style={{fontSize: 14, paddingTop: 5 }}>Nike Air Force 1 LV8 '07 4SP20 trainers in black</Text>
                             </View>
                         </View>

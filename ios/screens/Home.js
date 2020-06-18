@@ -147,91 +147,121 @@ class Home extends Component{
 
                         <View style={{marginTop: 40}}>
                             <Text style={{fontSize: 24, fontWeight: '700', paddingHorizontal: 20 }}>
-                                Explore
+                                Market place
                             </Text>
                                 
                             <View style={{marginTop: 25, marginBottom: 100, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
                             
-                            <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
-                                <View style={styles.imageSize}>
-                                    <Image source={require('./img/tote.jpg')} 
-                                        style={styles.img}
-                                    />
+                                <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
+                                    <View style={styles.imageSize}>
+                                        <Image source={require('./img/tote.jpg')} 
+                                            style={styles.img}
+                                        />
+                                    </View>
+                                    <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
+                                        <View style={{ flexDirection: "row" }}>
+                                            <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 3,000</Text>
+                                            <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                                <Icon name="ios-heart-empty" size={24} />
+                                            </TouchableOpacity>
+                                        </View>
+                                        <Text style={{fontSize: 15, paddingTop: 5 }}>Sesame Street women's luxury shoulder tote bag</Text>
+                                    </View>
                                 </View>
-                                <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                    <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 3,000</Text>
-                                    <Text style={{fontSize: 15, paddingTop: 5 }}>Sesame Street women's luxury shoulder tote bag</Text>
+
+                                <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
+                                    <View style={styles.imageSize}>
+                                        <Image source={require('./img/tj.jpg')} 
+                                            style={styles.img}
+                                        />
+                                    </View>
+                                    <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
+                                        <View style={{ flexDirection: "row" }}>
+                                            <Text style={{ fontSize: 15, fontWeight:"800"}}>Dzd 500</Text>
+                                            <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                                <Icon name="ios-heart-empty" size={24} />
+                                            </TouchableOpacity>
+                                        </View>    
+                                            <Text style={{fontSize: 14, paddingTop: 5 }}>Tom and Jerry leather passport cover</Text>
+                                    </View>
                                 </View>
                             </View>
 
-                            <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
-                                <View style={styles.imageSize}>
-                                    <Image source={require('./img/tj.jpg')} 
-                                        style={styles.img}
-                                    />
+                            <View style={{marginTop: 40, marginBottom: 100, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+
+                                <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
+                                    <View style={styles.imageSize}>
+                                        <Image source={require('./img/AirMax.jpg')} 
+                                            style={styles.img}
+                                        />
+                                    </View>
+                                    <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
+                                        <View style={{ flexDirection: "row" }}>
+                                            <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 65,000</Text>
+                                            <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                                <Icon name="ios-heart-empty" size={24} />
+                                            </TouchableOpacity>
+                                        </View>
+                                            <Text style={{fontSize: 15, paddingTop: 5 }}>Nike Air Max 95 leather trainers in white</Text>
+                                    </View>
                                 </View>
-                                <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                    <Text style={{ fontSize: 15, fontWeight:"800"}}>Dzd 500</Text>
-                                    <Text style={{fontSize: 14, paddingTop: 5 }}>Tom and Jerry leather passport cover</Text>
+
+                                <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
+                                    <View style={styles.imageSize}>
+                                        <Image source={require('./img/AF1B.jpg')} 
+                                            style={styles.img}
+                                        />
+                                    </View>
+                                    <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
+                                        <View style={{ flexDirection: "row" }}>
+                                            <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 25,500</Text>
+                                            <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                                <Icon name="ios-heart-empty" size={24} />
+                                            </TouchableOpacity>
+                                        </View>
+                                        <Text style={{fontSize: 14, paddingTop: 5 }}>Nike Air Force 1 LV8 Utility SL trainers in black</Text>
+                                    </View>
                                 </View>
                             </View>
+
+                            <View style={{marginTop: 40, marginBottom: 100, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+
+                                <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
+                                    <View style={styles.imageSize}>
+                                        <Image source={require('./img/socks.jpg')} 
+                                            style={styles.img}
+                                        />
+                                    </View>
+                                    <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
+                                        <View style={{ flexDirection: "row" }}>
+                                            <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 1,500</Text>
+                                            <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                                <Icon name="ios-heart-empty" size={24} />
+                                            </TouchableOpacity>
+                                        </View>
+                                        <Text style={{fontSize: 15, paddingTop: 5 }}>Van Gogh desgin mural socks</Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
+                                    <View style={styles.imageSize}>
+                                        <Image source={require('./img/joker.jpg')} 
+                                            style={styles.img}
+                                        />
+                                    </View>
+                                    <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
+                                        <View style={{ flexDirection: "row" }}>
+                                            <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 2,500</Text>
+                                            <TouchableOpacity style={{ marginHorizontal: 60 }}>
+                                                <Icon name="ios-heart-empty" size={24} />
+                                            </TouchableOpacity>
+                                        </View>
+                                        <Text style={{fontSize: 14, paddingTop: 5 }}>Joker Behance silicone cover</Text>
+                                    </View>
+                                </View>
+                            </View>
+
                         </View>
-
-                        <View style={{marginTop: 20, marginBottom: 100, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-
-                            <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
-                                <View style={styles.imageSize}>
-                                    <Image source={require('./img/AirMax.jpg')} 
-                                        style={styles.img}
-                                    />
-                                </View>
-                                <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                    <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 65,000</Text>
-                                    <Text style={{fontSize: 15, paddingTop: 5 }}>Nike Air Max 95 leather trainers in white</Text>
-                                </View>
-                            </View>
-
-                            <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
-                                <View style={styles.imageSize}>
-                                    <Image source={require('./img/AF1B.jpg')} 
-                                        style={styles.img}
-                                    />
-                                </View>
-                                <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                    <Text style={{ fontSize: 15, fontWeight:"800"}}>Dzd 25,500</Text>
-                                    <Text style={{fontSize: 14, paddingTop: 5 }}>Nike Air Force 1 LV8 Utility SL trainers in black</Text>
-                                </View>
-                            </View>
-                        </View>
-
-                        <View style={{marginTop: 20, marginBottom: 100, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-
-                            <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
-                                <View style={styles.imageSize}>
-                                    <Image source={require('./img/socks.jpg')} 
-                                        style={styles.img}
-                                    />
-                                </View>
-                                <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                    <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 1,500</Text>
-                                    <Text style={{fontSize: 15, paddingTop: 5 }}>Van Gogh desgin mural socks</Text>
-                                </View>
-                            </View>
-
-                            <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
-                                <View style={styles.imageSize}>
-                                    <Image source={require('./img/joker.jpg')} 
-                                        style={styles.img}
-                                    />
-                                </View>
-                                <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
-                                    <Text style={{ fontSize: 15, fontWeight:"800"}}>Dzd 2,500</Text>
-                                    <Text style={{fontSize: 14, paddingTop: 5 }}>Joker Behance silicone cover</Text>
-                                </View>
-                            </View>
-                        </View>
-
-                    </View>
                     </ScrollView>
                 </View>
             </SafeAreaView>

@@ -17,11 +17,12 @@ import Cart from './ios/screens/Cart'
 import Profile from './ios/screens/Profile'
 
 import ItemScreen from './ios/screens/routes/ItemScreen'
-import CheckoutScreen from './ios/screens/routes/CheckoutScreen'
 import Store from './ios/screens/routes/StoreScreen'
 import StoreScreen from './ios/screens/routes/StoreScreen'
 import ProductScreen from './ios/screens/routes/ProductScreen'
 import PlacesScreen from './ios/screens/routes/PlacesScreen'
+import OrderScreen from './ios/screens/routes/OrderScreen'
+import CheckoutScreen from './ios/screens/routes/CheckoutScreen'
 
 import * as firebase from 'firebase'
 
@@ -109,10 +110,11 @@ const AuthStack = createStackNavigator({
 
 const RouteStack = createStackNavigator({
     Item: ItemScreen,
-    Checkout: CheckoutScreen,
     Store: StoreScreen,
     Product: ProductScreen,
-    Places: PlacesScreen
+    Places: PlacesScreen,
+    order: OrderScreen,
+    Checkout: CheckoutScreen
 });
 
 export default createAppContainer(
