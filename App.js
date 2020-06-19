@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
-
 import Icon from 'react-native-vector-icons/Ionicons';
+
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
@@ -110,13 +110,13 @@ const AuthStack = createStackNavigator({
 });
 
 const RouteStack = createStackNavigator({
-    Item: ItemScreen,
     Store: StoreScreen,
     Product: ProductScreen,
     Places: PlacesScreen,
     order: OrderScreen,
     Checkout: CheckoutScreen,
-    event: EventScreen
+    event: EventScreen,
+    Item: ItemScreen
 });
 
 export default createAppContainer(

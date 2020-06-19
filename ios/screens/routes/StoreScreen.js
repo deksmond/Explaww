@@ -15,12 +15,12 @@ export default class StoreScreen extends React.Component{
             <SafeAreaView style={styles.container}>
                 
                 <View style={styles.header}>
-                        <Text style={{ fontSize: 18, fontWeight:'700', marginTop: 5 }}>
-                            Nike
-                        </Text>
-                        <TouchableOpacity style={styles.backButton} onPress={() => this.props.navigation.navigate("Home")}>
-                            <Icon name="ios-arrow-round-back" size={38} color="#E9446A" />
-                        </TouchableOpacity>
+                    <Text style={{ fontSize: 18, fontWeight:'700', marginTop: 5 }}>
+                        Nike
+                    </Text>
+                    <TouchableOpacity style={styles.backButton} onPress={() => this.props.navigation.navigate("Home")}>
+                        <Icon name="ios-arrow-round-back" size={38} color="#E9446A" />
+                    </TouchableOpacity>
                 </View>
 
                 <ScrollView>
@@ -41,7 +41,7 @@ export default class StoreScreen extends React.Component{
                                         <Icon name="ios-heart-empty" size={24} />
                                     </TouchableOpacity>
                                 </View>
-                                    <Text style={{fontSize: 15, paddingTop: 5 }}>Air Jordan 1 Retro High OG 'Obsidian'</Text>
+                                <Text style={{fontSize: 15, paddingTop: 5 }}>Air Jordan 1 Retro High OG 'Obsidian'</Text>
                             </View>
                         </View>
 

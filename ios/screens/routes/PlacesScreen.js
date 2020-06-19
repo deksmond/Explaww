@@ -15,12 +15,12 @@ export default class PlacesScreen extends React.Component{
             <SafeAreaView style={styles.container}>
                 
                 <View style={styles.header}>
-                        <Text style={{ fontSize: 18, fontWeight:'700', marginTop: 5 }}>
-                            Alger
-                        </Text>
-                        <TouchableOpacity style={styles.backButton} onPress={() => this.props.navigation.navigate("Location")}>
-                            <Icon name="ios-arrow-round-back" size={38} color="#E9446A" />
-                        </TouchableOpacity>
+                    <Text style={{ fontSize: 18, fontWeight:'700', marginTop: 5 }}>
+                        Alger
+                    </Text>
+                    <TouchableOpacity style={styles.backButton} onPress={() => this.props.navigation.navigate("Location")}>
+                        <Icon name="ios-arrow-round-back" size={38} color="#E9446A" />
+                    </TouchableOpacity>
                 </View>
 
                 <ScrollView>
@@ -28,11 +28,11 @@ export default class PlacesScreen extends React.Component{
                         
                         <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
 
-                                <View style={styles.imageSize}>
-                                    <Image source={require('../img/mascara.jpg')} 
-                                        style={styles.img}
-                                    />
-                                </View>
+                            <View style={styles.imageSize}>
+                                <Image source={require('../img/mascara.jpg')} 
+                                    style={styles.img}
+                                />
+                            </View>
 
                             <View style={{ alignItems: 'flex-start', justifyContent: 'space-evenly', paddingTop: 7 }}>
                                 <Text style={{ fontSize: 15, fontWeight:"800" }}>Dzd 2,271</Text>

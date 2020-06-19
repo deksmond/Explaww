@@ -12,70 +12,50 @@ class Location extends Component{
                         </Text>
                 </View>
 
-                <ScrollView>
+                    <ScrollView>
                         <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 10, paddingTop: 25, justifyContent: 'space-between'}}>
 
                             <TouchableOpacity onPress={() => this.props.navigation.navigate("Places")}>
-                                <View style={{ height: 150, width: 125, borderRadius: 10}}>
+                                <View style={{ height: 210, width: 160, borderRadius: 10, marginHorizontal: 5 }}>
                                     <ImageBackground source={require('./img/alger.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
                                         <View style={styles.layout}>
                                             <Text style={styles.imgTxt}>
-                                            Alger
+                                                Alger
                                             </Text>
                                         </View>
                                     </ImageBackground>
                                 </View>
                             </TouchableOpacity>
 
-                            <View style={{ height: 150, width: 125, borderRadius: 10}}>
+                            <View style={{ height: 210, width: 160, borderRadius: 10, marginHorizontal: 5 }}>
                                 <ImageBackground source={require('./img/annaba.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
                                     <View style={styles.layout}>
                                         <Text style={styles.imgTxt}>
-                                        Annaba
+                                             Annaba
                                         </Text>
                                     </View>
                                 </ImageBackground>
                             </View>
 
-                            <View style={{ height: 150, width: 125, borderRadius: 10}}>
+                        </View>
+
+                        <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 10, paddingTop: 25, justifyContent: 'space-between'}}>
+
+                            <View style={{ height: 210, width: 160, borderRadius: 10, marginHorizontal: 5 }}>
                                 <ImageBackground source={require('./img/blida.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
                                     <View style={styles.layout}>
                                         <Text style={styles.imgTxt}>
-                                        Blida
+                                            Blida
                                         </Text>
                                     </View>
                                 </ImageBackground>
                             </View>
 
-                        </View>
-
-                        <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 10, paddingTop: 25, justifyContent: 'space-between'}}>
-
-                            <View style={{ height: 150, width: 125, borderRadius: 10}}>
+                            <View style={{ height: 210, width: 160, borderRadius: 10, marginHorizontal: 5 }}>
                                 <ImageBackground source={require('./img/tizi.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
                                     <View style={styles.layout}>
                                         <Text style={styles.imgTxt}>
-                                        Tizi
-                                        </Text>
-                                    </View>
-                                </ImageBackground>
-                            </View>
-
-                            <View style={{ height: 150, width: 125, borderRadius: 10}}>
-                                <ImageBackground source={require('./img/setif.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
-                                    <View style={styles.layout}>
-                                        <Text style={styles.imgTxt}>
-                                        Setif
-                                        </Text>
-                                    </View>
-                                </ImageBackground>
-                            </View>
-
-                            <View style={{ height: 150, width: 125, borderRadius: 10}}>
-                                <ImageBackground source={require('./img/mostaganem.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
-                                    <View style={styles.layout}>
-                                        <Text style={styles.imgTxt}>
-                                        Mostaganem
+                                            Tizi
                                         </Text>
                                     </View>
                                 </ImageBackground>
@@ -85,31 +65,21 @@ class Location extends Component{
 
                         <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 10, paddingTop: 25, justifyContent: 'space-between'}}>
 
-                            <View style={{ height: 150, width: 125, borderRadius: 10}}>
+                            <View style={{ height: 210, width: 160, borderRadius: 10, marginHorizontal: 5 }}>
+                                <ImageBackground source={require('./img/bja.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
+                                    <View style={styles.layout}>
+                                        <Text style={styles.imgTxt}>
+                                            Bejaia
+                                        </Text>
+                                    </View>
+                                </ImageBackground>
+                            </View>
+
+                            <View style={{ height: 210, width: 160, borderRadius: 10, marginHorizontal: 5 }}>
                                 <ImageBackground source={require('./img/sidi-bel-abbes.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
                                     <View style={styles.layout}>
                                         <Text style={styles.imgTxt}>
-                                        Sidi-bel-abbes
-                                        </Text>
-                                    </View>
-                                </ImageBackground>
-                            </View>
-
-                            <View style={{ height: 150, width: 125, borderRadius: 10}}>
-                                <ImageBackground source={require('./img/oran.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
-                                    <View style={styles.layout}>
-                                        <Text style={styles.imgTxt}>
-                                        Oran
-                                        </Text>
-                                    </View>
-                                </ImageBackground>
-                            </View>
-
-                            <View style={{ height: 150, width: 125, borderRadius: 10}}>
-                                <ImageBackground source={require('./img/consta.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
-                                    <View style={styles.layout}>
-                                        <Text style={styles.imgTxt}>
-                                        Constantine
+                                            Sidi-bel-abbes
                                         </Text>
                                     </View>
                                 </ImageBackground>
@@ -118,8 +88,32 @@ class Location extends Component{
                         </View>
 
                         <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 10, paddingTop: 25, justifyContent: 'space-between'}}>
-                            
-                            <View style={{ height: 150, width: 125, borderRadius: 10}}>
+
+                            <View style={{ height: 210, width: 160, borderRadius: 10, marginHorizontal: 5 }}>
+                                <ImageBackground source={require('./img/oran.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
+                                    <View style={styles.layout}>
+                                        <Text style={styles.imgTxt}>
+                                            Oran
+                                        </Text>
+                                    </View>
+                                </ImageBackground>
+                            </View>
+
+                            <View style={{ height: 210, width: 160, borderRadius: 10, marginHorizontal: 5 }}>
+                                <ImageBackground source={require('./img/consta.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
+                                    <View style={styles.layout}>
+                                        <Text style={styles.imgTxt}>
+                                            Constantine
+                                        </Text>
+                                    </View>
+                                </ImageBackground>
+                            </View>
+
+                        </View>
+
+                        <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 10, paddingTop: 25, justifyContent: 'space-between'}}>
+
+                            <View style={{ height: 210, width: 160, borderRadius: 10, marginHorizontal: 5 }}>
                                 <ImageBackground source={require('./img/tlemcen.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
                                     <View style={styles.layout}>
                                         <Text style={styles.imgTxt}>
@@ -129,6 +123,15 @@ class Location extends Component{
                                 </ImageBackground>
                             </View>
 
+                            <View style={{ height: 210, width: 160, borderRadius: 10, marginHorizontal: 5 }}>
+                                <ImageBackground source={require('./img/mostaganem.jpg')} imageStyle={{borderRadius: 20}} style={styles.imgContainer}>
+                                    <View style={styles.layout}>
+                                        <Text style={styles.imgTxt}>
+                                            Mostaganem
+                                        </Text>
+                                    </View>
+                                </ImageBackground>
+                            </View>
 
                         </View>
 
@@ -162,7 +165,7 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontSize: 23,
       fontWeight:'bold',
-      paddingTop: 60,
+      paddingTop: 85,
     },
     });
 

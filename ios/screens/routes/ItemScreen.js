@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, SafeAreaView, ScrollView, StyleSheet, Button, TouchableOpacity } from 'react-native';
+import { Text, View, Image, SafeAreaView, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
 import { Dropdown } from 'react-native-material-dropdown'
 
@@ -44,39 +44,39 @@ export default class ItemScreen extends Component {
           <ScrollView>
 
             <View>
-                <Image 
-                  style={{width: '100%', height: '110%' }}
-                  source={require('../img/vgs.jpg')}
-                />
+              <Image 
+                style={{width: '100%', height: '110%' }}
+                source={require('../img/vgs.jpg')}
+              />
 
               <TouchableOpacity style={styles.backButton} onPress={() => this.props.navigation.navigate("Home")}>
-                  <Icon name="ios-arrow-round-back" size={45} color="#E9446A" />
+                <Icon name="ios-arrow-round-back" size={45} color="#E9446A" />
               </TouchableOpacity>
 
             </View>
 
             <View style={styles.text}>
-                <Text style={{ fontSize: 20, fontWeight: "700" }}>Dzd 4,000</Text>
-                <View style={{ flexDirection: "row"}}>
-                  <Text style={{ fontSize: 18, paddingTop: 10 }}>Vans old school black semi rounded sunglasses</Text>
-                  <TouchableOpacity style={{ marginHorizontal: 30, marginTop: -20 }}>
-                    <Icon name="ios-heart-empty" size={30} />
-                  </TouchableOpacity>
-                </View>
-                <Dropdown
-                  label='Colour'
-                  data={data}
-                />
-                <View style={{ flexDirection: "row" }}>
-                  <Text style={{ fontSize: 17, paddingTop: 10 }}>Qty:</Text>
-                    <TouchableOpacity style={{ marginTop: 8, marginHorizontal: 15 }} onPress={this.incrementCounter}>
-                        <Icon name="md-add" size={25} />
-                    </TouchableOpacity>
-                  <Text style={{ fontSize: 20 ,marginTop: 8, marginHorizontal: 15 }}>{counter}</Text>
-                  <TouchableOpacity style={{ marginTop: 8, marginHorizontal: 15 }} onPress={this.decrementCounter}>
-                      <Icon name="md-remove" size={25} />
-                  </TouchableOpacity>
-                </View>
+              <Text style={{ fontSize: 20, fontWeight: "700" }}>Dzd 4,000</Text>
+              <View style={{ flexDirection: "row"}}>
+                <Text style={{ fontSize: 18, paddingTop: 10 }}>Vans old school black semi rounded sunglasses</Text>
+                <TouchableOpacity style={{ marginHorizontal: 30, marginTop: -20 }}>
+                  <Icon name="ios-heart-empty" size={30} />
+                </TouchableOpacity>
+              </View>
+              <Dropdown
+                label='Colour'
+                data={data}
+              />
+              <View style={{ flexDirection: "row" }}>
+                <Text style={{ fontSize: 17, paddingTop: 10 }}>Qty:</Text>
+                <TouchableOpacity style={{ marginTop: 8, marginHorizontal: 15 }} onPress={this.incrementCounter}>
+                  <Icon name="md-add" size={25} />
+                </TouchableOpacity>
+                <Text style={{ fontSize: 20 ,marginTop: 8, marginHorizontal: 15 }}>{counter}</Text>
+                <TouchableOpacity style={{ marginTop: 8, marginHorizontal: 15 }} onPress={this.decrementCounter}>
+                  <Icon name="md-remove" size={25} />
+                </TouchableOpacity>
+              </View>
               <Text style={{ fontSize: 17, paddingTop: 10, fontWeight: "600" }}>Delivery fee: DZD 900</Text>
               <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate("Checkout")}>
                 <Text style={{color: '#FFF', textAlign:'center', fontSize: 20}}>BUY NOW</Text>

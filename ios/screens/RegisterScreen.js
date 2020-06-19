@@ -12,7 +12,6 @@ class RegisterScreen extends React.Component{
         errorMessage: null
     }
 
-
 handleSignUp = () => {
     firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
     .then(userCredentials => {
@@ -37,9 +36,9 @@ handleSignUp = () => {
                 <View style={styles.form}>
                     <Text style={styles.inputTxt}>Full name</Text>
                     <TextInput style={styles.txtInput} 
-                    autoCapitalize="none"
-                    onChangeText={ name => this.setState({ name })}
-                    value={this.state.name}
+                        autoCapitalize="none"
+                        onChangeText={ name => this.setState({ name })}
+                        value={this.state.name}
                     >
                     </TextInput>
                 </View>             
@@ -47,9 +46,9 @@ handleSignUp = () => {
                 <View style={styles.form}>
                     <Text style={styles.inputTxt}>Email adress</Text>
                     <TextInput style={styles.txtInput} 
-                    autoCapitalize="none"
-                    onChangeText={ email => this.setState({ email })}
-                    value={this.state.email}
+                        autoCapitalize="none"
+                        onChangeText={ email => this.setState({ email })}
+                        value={this.state.email}
                     >
                     </TextInput>
                 </View>
@@ -57,10 +56,10 @@ handleSignUp = () => {
                 <View style={styles.form}>
                     <Text style={styles.inputTxt}>Password</Text>
                     <TextInput style={styles.txtInput} 
-                    autoCapitalize="none" 
-                    secureTextEntry={true}
-                    onChangeText={ password => this.setState({ password })}
-                    value={this.state.password}
+                        autoCapitalize="none" 
+                        secureTextEntry={true}
+                        onChangeText={ password => this.setState({ password })}
+                        value={this.state.password}
                     >
                     </TextInput>
                 </View>
@@ -71,13 +70,13 @@ handleSignUp = () => {
 
                 <TouchableOpacity style={{ alignSelf: "center", marginTop: 32 }} onPress={() => this.props.navigation.navigate("Login")}>
                     <Text style={{ color:"#414959", fontSize: 13 }}>
-                    Click here to <Text style={{ color:"#E9446A", fontWeight:"500" }}>Sign in</Text>
+                        Click here to <Text style={{ color:"#E9446A", fontWeight:"500" }}>Sign in</Text>
                     </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={{ alignSelf: "center", marginTop: 80 }} onPress={() => Linking.openURL('https://www.google.com')}>
                     <Text style={{ color:"#414959", fontSize: 13 }}>
-                    Click <Text style={{ color:"#E9446A", fontWeight:"500" }}>here</Text> to read our Privacy and Policy agreement
+                        Click <Text style={{ color:"#E9446A", fontWeight:"500" }}>here</Text> to read our terms and conditions
                     </Text>
                 </TouchableOpacity>
 
