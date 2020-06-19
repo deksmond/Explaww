@@ -24,7 +24,7 @@ export default class PlacesScreen extends React.Component{
                 </View>
 
                 <ScrollView>
-                    <View style={{marginTop: 25, marginBottom: 110, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                    <View style={{marginTop: 20, marginBottom: 110, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
                         
                         <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
 
@@ -53,7 +53,7 @@ export default class PlacesScreen extends React.Component{
                         </View>
                     </View>
 
-                    <View style={{marginTop: 20, marginBottom: 110, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                    <View style={{marginTop: 40, marginBottom: 110, paddingHorizontal: 20 ,flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
 
                         <View style={{ width: width / 2 - 30, height: width / 2 - 30, paddingBottom: 5 }}>
                             <View style={styles.imageSize}>
