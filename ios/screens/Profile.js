@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, SafeAreaView, Dimensions, ImageBackground, StyleSheet, TouchableOpacity, Linking } from 'react-native';
+import { Card, CardItem, Thumbnail, Body, Left } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import * as firebase from 'firebase'
@@ -48,37 +49,57 @@ class Profile extends Component{
                             </View>
                         </View>
 
-                        <View style={{ flex: 1, flexDirection: 'row', marginTop: 50, paddingHorizontal: 30, justifyContent: 'space-around' }}>
-
+                        <View style={{ flex: 1, marginTop: 25 }}>
                             <TouchableOpacity onPress={() => this.props.navigation.navigate("order")}>
-                                <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
-                                    <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
-                                            <Icon name="ios-cube" size={60} color='rgba(246, 36, 89, 5)' />
-                                            <Text style={styles.cardText}>Orders</Text>
-                                    </View>
-                                </View>
+                                <Card>
+                                    <CardItem>
+                                        <Left>
+                                            <Icon name="ios-cube" size={36} color='rgba(246, 36, 89, 5)' />
+                                            <Body>
+                                                <Text style={{fontSize: 17}}>Orders</Text>
+                                            </Body>
+                                        </Left>
+                                    </CardItem>
+                                </Card>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate("sell")}>
+                                <Card>
+                                    <CardItem>
+                                        <Left>
+                                            <Icon name="ios-cash" size={36} color='rgba(246, 36, 89, 5)' />
+                                            <Body>
+                                                <Text style={{fontSize: 17}}>Sell</Text>
+                                            </Body>
+                                        </Left>
+                                    </CardItem>
+                                </Card>
                             </TouchableOpacity>
 
                             <TouchableOpacity onPress={() => Linking.openURL('mailto: support@eureka.com')} title="support@eureka.com">
-                            <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
-                                <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
-                                        <Icon name="ios-desktop" size={60} color='rgba(246, 36, 89, 5)'/>
-                                        <Text style={styles.cardText}>Customer Service</Text>
-                                </View>
-                            </View>
+                                <Card>
+                                    <CardItem>
+                                        <Left>
+                                            <Icon name="ios-desktop" size={36} color='rgba(246, 36, 89, 5)' />
+                                            <Body>
+                                                <Text style={{fontSize: 17}}>Customer Service</Text>
+                                            </Body>
+                                        </Left>
+                                    </CardItem>
+                                </Card>
                             </TouchableOpacity>
 
-                        </View>
-
-                        <View style={{ flex: 1, flexDirection: 'row', marginTop: 40, paddingHorizontal: 30, justifyContent: 'space-around'}}>
-
                             <TouchableOpacity onPress={this.signOutUser}>
-                            <View style={{ width: width - 280 ,height: 130, backgroundColor: 'white', borderColor: '#dddddd', borderWidth: 1, borderRadius: 10 }}>
-                                <View style={{ flex: 1, alignItems: 'center', paddingTop: 20}}>
-                                        <Icon name="ios-arrow-back" size={60} color='rgba(246, 36, 89, 5)'/>
-                                        <Text style={styles.cardText}>Sign out</Text>
-                                </View>
-                            </View>
+                                <Card>
+                                    <CardItem>
+                                        <Left>
+                                            <Icon name="ios-arrow-back" size={36} color='rgba(246, 36, 89, 5)' />
+                                            <Body>
+                                                <Text style={{fontSize: 17}}>Sign out</Text>
+                                            </Body>
+                                        </Left>
+                                    </CardItem>
+                                </Card>
                             </TouchableOpacity>
 
                         </View>
@@ -106,7 +127,7 @@ const styles = StyleSheet.create ({
     title: {
         color: 'white',
         textAlign: 'center',
-        fontSize: 24,
+        fontSize: 22,
         fontWeight: '700'
     },
     cardText: {
